@@ -20,15 +20,17 @@
  <p>Can you guess the blurred word?</p>
 </div>
 <div id="game-container" class="container-fluid">
-  <div class="row">
-    <div id="controls" class="container-fluid col">
+  <div class="row justify-content-center">
+    <div id="controls" class="col">
       <button class="btn"><i class="fa fa-2x fa-random"></i></button>
-      <button class="btn"><i class="fa fa-2x fa-thumbs-up"></i></button>
-      <button class="btn"><i class="fa fa-2x fa-thumbs-down"></i></button>
+      <div class="float-right">
+        <button class="btn"><i class="fa fa-2x fa-thumbs-up"></i></button>
+        <button class="btn"><i class="fa fa-2x fa-thumbs-down"></i></button>
+      </div>
     </div>
   </div>
   <div class="row">
-    <div id="word-it" class="container-fluid col">
+    <div id="word-it" class="col">
       <div class="card">
         <h3 class="card-header"><span class="flag-icon flag-icon-it"></span> IT
           <button class="btn float-right"><i class="fa fa-lg fa-volume-up"></i></button></h3>
@@ -37,7 +39,7 @@
         </div>
       </div>
     </div>
-    <div id="word-en" class="container-fluid col">
+    <div id="word-en" class="col">
       <div class="card">
         <h3 class="card-header"><span class="flag-icon flag-icon-ie"></span> EN
           <button disabled class="btn float-right"><i class="fa fa-lg fa-volume-up"></i></button></h3>
