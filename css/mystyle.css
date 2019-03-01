@@ -1,0 +1,9 @@
+.spoiler {
+	filter: blur(5px);
+}
+
+.nospoiler {
+	filter: blur(0px);
+	transition-property: -webkit-filter;
+	transition-duration: .3s;
+}
