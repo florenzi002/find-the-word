@@ -12,6 +12,7 @@
  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
  <script src="http://code.responsivevoice.org/responsivevoice.js"></script>
+ <script src="https://d3js.org/d3.v5.min.js"></script>
  <script src="js/bootstrap-notify.min.js"></script>
  <script src="js/logic.js"></script>
 </head>
@@ -39,7 +40,8 @@
           <button class="btn float-right play-btn" onclick="speak(this, 'IT')"><i class="fa fa-lg fa-volume-up"></i></button>
         </h3>
         <div class="card-body">
-          <h4 class="card-text" onclick="reveal(this)">...</h4>
+          <h4 class="card-title" onclick="reveal(this)">...</h4>
+          <p class="card-text" onclick="reveal(this)">-</p>
         </div>
       </div>
     </div>
@@ -49,7 +51,8 @@
           <button class="btn float-right play-btn" onclick="speak(this)"><i class="fa fa-lg fa-volume-up"></i></button>
         </h3>
         <div class="card-body">
-          <h4 class="card-text" onclick="reveal(this)">...</h4>
+          <h4 class="card-title" onclick="reveal(this)">...</h4>
+          <p class="card-text" onclick="reveal(this)">-</p>
         </div>
       </div>
     </div>
