@@ -12,6 +12,7 @@
  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
  <script src="http://code.responsivevoice.org/responsivevoice.js"></script>
+ <script src="js/bootstrap-notify.min.js"></script>
  <script src="js/logic.js"></script>
 </head>
 <body>
@@ -23,10 +24,11 @@
 <div id="game-container" class="container-fluid">
   <div class="row justify-content-center">
     <div id="controls" class="col">
-      <button class="btn" onclick="utterWord()"><i class="fa fa-2x fa-redo"></i></button>
+      <button class="btn" onclick="newRound()"><i class="fa fa-2x fa-redo"></i></button>
       <div class="float-right">
-        <button class="btn"><i class="fa fa-2x fa-thumbs-up"></i></button>
-        <button class="btn"><i class="fa fa-2x fa-thumbs-down"></i></button>
+        <button class="btn up" onclick="updateScore(this)"><i class="fa fa-2x fa-thumbs-up"></i></button>
+        <span id="score" class="scoreboard">0</span>
+        <button class="btn down" onclick="updateScore(this)"><i class="fa fa-2x fa-thumbs-down"></i></button>
       </div>
     </div>
   </div>
@@ -34,20 +36,20 @@
     <div id="word-it" class="col">
       <div class="card">
         <h3 class="card-header"><span class="flag-icon flag-icon-it"></span> IT
-          <button class="btn float-right" onclick="utterWord()"><i class="fa fa-lg fa-volume-up"></i></button>
+          <button class="btn float-right play-btn" onclick="speak(this, 'IT')"><i class="fa fa-lg fa-volume-up"></i></button>
         </h3>
         <div class="card-body">
-          <h4 id="" class="card-text">...</h4>
+          <h4 class="card-text" onclick="reveal(this)">...</h4>
         </div>
       </div>
     </div>
     <div id="word-en" class="col">
       <div class="card">
         <h3 class="card-header"><span class="flag-icon flag-icon-ie"></span> EN
-          <button class="btn float-right"><i class="fa fa-lg fa-volume-up"></i></button>
+          <button class="btn float-right play-btn" onclick="speak(this)"><i class="fa fa-lg fa-volume-up"></i></button>
         </h3>
         <div class="card-body">
-          <h4 class="card-text">...</h4>
+          <h4 class="card-text" onclick="reveal(this)">...</h4>
         </div>
       </div>
     </div>
